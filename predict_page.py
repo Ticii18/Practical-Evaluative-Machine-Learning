@@ -38,10 +38,10 @@ def show_predict_page():
     ]
     
     education_levels=[
-    "Less than a Bachelors", # Tecnicatura
-    "Bachelor’s degree", #Licenciatura
-    "Master’s degree",
-    "Post grad",
+    "Tecnicatura", 
+    "Licenciatura", 
+    "Maestria",
+    "Posgrado",
     ]
 
     country = st.selectbox("Países", countries)
@@ -58,6 +58,6 @@ def show_predict_page():
         X = X.astype(float)
 
         salary = regressor.predict(X)
-        st.subheader(f"The estimated salary is ${salary[0]:.2f}")
+        st.subheader(f"El salario estimado es: ${salary[0]:.2f}")
     if not ok:
         st.info("Por favor, completa los datos y presiona 'Calculate Salary'.")
