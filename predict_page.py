@@ -2,7 +2,6 @@ import streamlit as st
 import pickle
 import numpy as np
 
-
 def load_module():
     with open('./Trainer/saved_steps.pkl', 'rb') as file:
         data = pickle.load(file)
